@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* به‌صورت عمودی */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            cursor: pointer; /* نشان‌دهنده کلیک‌پذیری */
+        }
+        .glass-panel {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 300px;
+            z-index: 1;
+            margin-left: 20px;
+        }
+        .glass-panel h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .logo {
+            width: 50px; /* اندازه لوگو */
+            height: 50px; /* اندازه لوگو */
+        }
+        .footer {
+            color: #fff;
+            margin-top: 20px; /* فاصله از بالای متن */
+        }
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="container" onclick="window.open('https://t.me/Bache_Asil', '_blank')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Telegram_logo.svg" alt="Telegram Logo" class="logo">
+    <div class="glass-panel">
+        <h2>Telegram</h2>
+    </div>
+</div>
+
+<div class="container" onclick="window.open('https://instagram.com/raamoox', '_blank')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="logo">
+    <div class="glass-panel">
+        <h2>Instagram</h2>
+    </div>
+</div>
+
+<div class="footer">Created by RAMOX</div>
+
+<!-- Include particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Particle.js Configuration -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+</body>
+</html>
